@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 
 @Injectable()
-export class AppService {
+export class OrderService {
   constructor(private readonly prisma: PrismaService) {}
 
   async createOrder(orderData) {
@@ -18,8 +18,5 @@ export class AppService {
         },
       });
     });
-  }
-  getHello(): string {
-    return 'Hello World!';
   }
 }

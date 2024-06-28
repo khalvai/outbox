@@ -1,8 +1,8 @@
 // src/outbox-dispatcher.service.ts
 import { Injectable } from '@nestjs/common';
-import { PrismaService } from './prisma/prisma.service';
 import { MessageBroker } from 'src/rabbitMq/message-broker';
 import { Cron } from '@nestjs/schedule';
+import { PrismaService } from 'nestjs-prisma';
 
 @Injectable()
 export class OutboxDispatcherService {
